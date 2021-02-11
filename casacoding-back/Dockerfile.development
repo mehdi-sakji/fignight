@@ -1,0 +1,16 @@
+FROM python:3.7.7-stretch
+
+ADD . /casacoding-api
+
+WORKDIR /casacoding-api
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.development.pip
+
+RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader stopwords
+
+ENTRYPOINT [ "python" ]
+
+CMD [ "run.py" ]

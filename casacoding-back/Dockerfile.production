@@ -1,0 +1,14 @@
+FROM python:3.7.7-stretch
+
+ADD . /smart-bot-api
+
+WORKDIR /smart-bot-api
+
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.production.pip
+
+RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader stopwords
+
+CMD [ "gunicorn", "-w", "4", "--bind", ":8080", "wsgi:app"]

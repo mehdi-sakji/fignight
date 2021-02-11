@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "casacoding",
+  "private_key_id": "da9187e1d0ebbce3bb005696a97f215926a6a027",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCICQJIBigpcgFG\n1Wmu36riW1j4aEi+USqrXw0HRyaUl/ZrS4Nh5yDjNHFc/DzvTmIY0wO8Sr9zJqBU\nFHAUqUrXyXXpCBMhmEqXvuoPf8REapb5h7W739OR0PZCESW4xxuEprz/VCss9vJv\npqRFElcZf5fk5bjKhIWmzNmaWBW9LaeTrzMZ1ichqv5/JvwyiE+a1tlvlEcEJZPM\nBgtUH2z8dvnoK6hKYzDx5R4IXR8+aH/BqfsKh6CCOlP6L798NuqQETOTHT/wXFBq\nwoVgNEscbPTV9nc1/NaMTYFwz2tm9n0iIlKvlzBm3aVDgwhL9KlocD/ltfC3KH6K\na6NEPbqzAgMBAAECggEABbU0ZSJBACWE8THA2py5llV/4QMQfk/N4F0/djKMPLLi\n8jM7wtldqLrewNM37qXqzsuCfh2NdT7wfjv8oe6ihyBbCVk/OEB5bMQ5ckde9wHu\nmMS9dtxti6eUFZyTk8e4RgjFqFmh6s6Sczsvlv2t2DzhejIQtAqlyE8TGFChhOD8\nXGmy80xYUgqmBZCHU/6LRz+J3DNEbHaINXI5Is4sezc2Haq8iTrkI4D8lkyowoh5\n7+JGLgCa1w0qa8d3/F1Lpv7nUNX38e3SobdU3fEeaFN3hW9qz0sA2cpXf7vxuPIZ\nkq8hjldMDZGoakZAuCnysA+Gfbl5VrHJW92EO0MiCQKBgQC7y0V3iq/ec/aUgiN3\n41VPnRqCWRYItJ8b8WoFpUW2EMVHEyAZGX/0VDlg3hiCishyiRf4lijgGikANw5F\neLYNz+iyE9B6yG81Ik84PlQlPXUqeloLqeUaZnNFQwjg006Gm8W0dOVR6r0MftM1\n5Zzzs/91H74igdZYUhRzkkq+KQKBgQC5cUzSyXpitabgym00+TSWmBtZw/OAotHc\nQraX91ATXD7VRhP/KIAN+/tEFPj3NGMDnTAkyA2OFrtW7sG7sX16bdcUVbSvsPR0\nnvywRS0PSOB/38xfgLC10iv6WjwEhyqrNt6O+sRD+PswXeh4wWwIvwSrz5tS3uZu\nftOF9EMVewKBgGYELP6dtqBv+pn+gGoWczfGrqn030Vnaa/yW5gpik83mRPdTeiU\ns6/1OR5oSIRSBEZEN2Nxn07upytYvUX8J1olgdGLdgvdapxAwSxan7eDRW0H/nar\nmqvWz/PmUKJh6Byz7pjzj8gKbxykoPR8geDZ/YKQ9eclBV4BaN7HsBbRAoGBAK/l\nQxxRFXAZo19nQqzTkEkjoBXGIusqBWsqMG32nJKwlbzQStlkvgoFsDDEv94jZ6Oe\n7nKE+y6Ca1IrB8ITudRt6WuVW9ymOUmBIGfGRdZQpvlD+2O++l6MK0C9ZF5bI2Lh\nmbr/KzjaKtCW0pHvzZyCK1kYg9jYKrQ2Qka2CQePAoGBALRoTzPsKh6k6LJQlWQz\n9dkdd+v7nHIb8z3FX+dDYwv+3zKdgtRJ+da4h0I+ZxCYPFXt+kroyr8tfRjCl04N\nkoG3OaSphxBYL+bqCAHQxE0V9B2Smwcf08ciNcfORmmQ0et2nYYfZ8rVw2buaTdo\ne9C+xun574Y+7zX1b5HrHxhF\n-----END PRIVATE KEY-----\n",
+  "client_email": "casacoding@appspot.gserviceaccount.com",
+  "client_id": "115653182741106257638",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/casacoding%40appspot.gserviceaccount.com"
+}

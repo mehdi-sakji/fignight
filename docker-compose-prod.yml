@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+
+  casacoding_back_prod:
+    container_name: casacoding_back_prod
+    build:
+      context: ./casacoding-back
+      dockerfile: Dockerfile.production
+    ports:
+      - '8080:8080'
+    networks:
+      - casacoding
+
+  casacoding_front_prod:
+    container_name: casacoding_front_prod
+    build:
+      context: ./casacoding-front
+      dockerfile: Dockerfile.development
+    ports:
+      - '8080:8080'
+    networks:
+      - casacoding
+      
+volumes:
+  data:
+    driver: local
+
+networks:
+  casacoding:
+    driver: bridge
