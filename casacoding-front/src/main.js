@@ -9,12 +9,17 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueClipboard from 'vue-clipboard2'
+import KProgress from 'k-progress';
+import VueSimpleAlert from "vue-simple-alert";
 
+
+Vue.component('k-progress', KProgress);
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 Vue.use(VueClipboard)
+Vue.use(VueSimpleAlert);
 
 /* eslint-disable no-new */
 new Vue({

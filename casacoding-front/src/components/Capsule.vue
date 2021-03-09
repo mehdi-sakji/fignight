@@ -17,12 +17,12 @@
           <b-icon icon="pen"></b-icon> <span> {{ content.purpose }} </span>
         </div>
         <div class="cp_cd_cntnr">
-          <span class="cp_cd">{{ content.code }}</span>
+          <pre class="cp_cd"><code>{{content.code.replace('\t', '    ')}}</code></pre>
         </div>
       </b-card-body>
       <b-card-footer>
-        <b-button variant="info" class="cp_btn"> Copy </b-button>
-        <b-button variant="info" class="cp_btn"> Edit </b-button>
+        <b-button variant="info" class="cp_btn"
+                  v-clipboard:copy="content.code"> Copy </b-button>
       </b-card-footer>
     </b-card>
   </div>
@@ -58,22 +58,25 @@ export default {
       },
       handleSuccess(e) {
             console.log(e);
-        },
-        handleError(e) {
-            console.log(e);
-        }
+      },
+      handleError(e) {
+          console.log(e);
+      }
    }
 }
 </script>
 
 <style scoped>
+b-card{
+  border-color: coral;
+}
 .capsule {
   position: relative;
   left: 2em;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px 5px rgba(0.2,0.2,0.2,0.2);
   border-radius: 0.6em;
   background-color: white;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
   width: 90%;
 }
 .cp_tgs
@@ -119,25 +122,14 @@ export default {
 {
   font-size: 1.2em;
 }
-.cp_thr
-{
-  font-size: 18px;
-  color:grey;
-  font-weight:lighter;
-}
-.cp_thr_lnk
-{
-  color:darkblue;
-  font-weight:bold;
-}
 .cp_cd_cntnr {
   background-color:midnightblue;
   padding: 1em;
+  border-radius: 0.6em;
 }
 .cp_cd {
-  white-space:pre-line;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: 'Courier New', Courier, monospace;
 }
 .cp_dt

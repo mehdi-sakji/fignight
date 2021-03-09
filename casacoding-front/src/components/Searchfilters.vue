@@ -16,7 +16,7 @@
             tag-pills
             separator=" "
             v-model="tags"
-            placeholder="Add tags"
+            placeholder="Search tags"
             :limitTagsText="limitTagsText">
           </b-form-tags>
         </div>
@@ -33,12 +33,15 @@
           <label class="lcd"> Code:</label>
           <b-form-input class="npt_cd_frm" v-model="code" type="text"></b-form-input>
         </div>
-      </div>
-      <div class="newentry">
-        <b-button
-          class="nw_hlpr_btn"
-          variant="outline-primary"
-          href="#/insert"> New Helper! </b-button>
+        <div class="newentry">
+          <b-button
+            class="srch_hlpr_btn"
+            variant="info"> Search Helper </b-button>
+          <b-button
+            class="nw_hlpr_btn"
+            variant="info"
+            href="#/insert"> New Helper </b-button>
+        </div>
       </div>
     </div>
 </template>
@@ -48,10 +51,12 @@
 import { mdbSelect } from "mdbvue";
 import axios from 'axios'
 
-// const cat_api = 'https://casacoding-back-dot-casacoding.nw.r.appspot.com/api/allcategories'
-// const cat_tags = 'https://casacoding-back-dot-casacoding.nw.r.appspot.com/api/alltags'
-const cat_api = 'http://35.187.86.233:8080/api/allcategories'
-const cat_tags = 'http://35.187.86.233:8080/api/alltags'
+
+//var host = 'https://casacoding-back-dot-casacoding.nw.r.appspot.com'
+//const host = 'http://127.0.0.1:8080'
+const cat_api = 'http://127.0.0.1:8080/api/allcategories'
+const tags_api = 'http://127.0.0.1:8080/api/alltags'
+
 
 export default {
   name: 'Searchfilters',
@@ -65,6 +70,7 @@ export default {
           { value: null, text: 'All categories'},
         ],
       tags: [],
+      tags_options: [],
       purpose: null,
       code: null
     }
@@ -76,6 +82,15 @@ export default {
     submittedPurpose(event) {
       this.$emit('submittedPurpose', this.purpose)
     }
+    /*
+    tagValidator(tags) {
+      for (let i = 0; i < response.data.response.length; i++)
+      {
+        this.tags_options.push(response.data.response[i])
+      }
+      return tag in this.tags_options
+    }
+    */
   },
   mounted () {
     axios.get(cat_api).then(response => {
@@ -86,7 +101,13 @@ export default {
             text: response.data.response[i], value: response.data.response[i]
           })
       }
-      })
+      }),
+    axios.get(tags_api).then(response => {
+      for (let i = 0; i < response.data.response.length; i++)
+      {
+        this.tags_options.push(response.data.response[i])
+      }
+    })
   }
 }
 </script>
@@ -96,10 +117,11 @@ export default {
   width: 30%;
 }
 .searchpanel {
-  background-color:cornsilk;
+  border-color: coral;
+  background-color: cornsilk;
   padding: 1em;
   border-radius: 0.6em;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
 }
 .newentry {
   margin-top: 2em;
@@ -110,14 +132,20 @@ export default {
   width: 20%;
   font-weight: bold;
   text-align: left;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 .slct_ct_frm, .slct_tg_frm, .npt_prps_frm, .npt_cd_frm{
   display: inline-block;
   width: 60%;
   margin-left:2em;
+  font-size: 1.2em;
 }
 .slct_ct, .slct_tg, .npt_prps, .npt_cd {
   margin-bottom: 1.2em;
+}
+.nw_hlpr_btn, .srch_hlpr_btn {
+  font-size: 1.1em;
+  border-radius: 0.6em;
+  margin-right: 1em;
 }
 </style>

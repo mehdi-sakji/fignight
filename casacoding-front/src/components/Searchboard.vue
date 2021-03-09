@@ -1,6 +1,5 @@
 <template>
     <div class="searchboard">
-      <h1> Timeline </h1>
       <div v-for="(item, $index) in list" :key="$index"> <capsule :content=item></capsule> </div>
       <infinite-loading ref="infiniteLoading" @infinite="infiniteHandler" spinner="spiral">
         <div class="nmrmssg" slot="no-more"> That's all folks ! </div>
@@ -15,8 +14,9 @@ import Capsule from './Capsule'
 import InfiniteLoading from 'vue-infinite-loading'
 import axios from 'axios'
 
-// const api = 'https://casacoding-back-dot-casacoding.nw.r.appspot.com/api/codeHelper'
-const api = 'http://35.187.86.233:8080/api/codeHelper'
+//var host = 'https://casacoding-back-dot-casacoding.nw.r.appspot.com'
+// const host = 'http://127.0.0.1:8080'
+const api = 'http://127.0.0.1:8080/api/codeHelper'
 
 export default {
   name: 'Searchboard',
@@ -38,8 +38,8 @@ export default {
     filters: function() {
       this.list = [];
       this.page_order = 0
-      this.page_size = 2,
-      this.$refs.infiniteLoading.stateChanger.reset(); 
+      this.page_size = 10,
+      this.$refs.infiniteLoading.stateChanger.reset();
     }
   },
   methods: {

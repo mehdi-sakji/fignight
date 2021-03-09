@@ -133,7 +133,5 @@ class CodeHelper(Resource):
             results.append({
                 "category": row.category, "tags": row.tags,
                 "purpose": row.purpose, "code": row.code,
-                "created": humanize.naturaltime(
-                    row.created - timedelta(seconds=3600))
-                })
+                "created": row.created.strftime("%Y-%m-%dT%H:%M:%S")})
         return results
